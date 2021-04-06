@@ -91,6 +91,29 @@
         }
     }
 
+    &_newPostButton{
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 25px;
+        padding: 0.8em;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background: #2f5b25;
+    
+        border-radius: 10%;
+        
+        margin: 0 0 0 auto;
+    
+    
+        &:hover {
+            opacity:0.8;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
 }
 
 

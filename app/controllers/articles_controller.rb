@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    
   end
   
   def show
@@ -46,8 +47,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :content)
-
-    #そのうちアイキャッチも作るかも
+    params.require(:article).permit(:title, :content, :image)
   end
 end

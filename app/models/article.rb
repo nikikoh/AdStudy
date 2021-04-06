@@ -1,7 +1,16 @@
 class Article < ApplicationRecord
 
-    def author_name
-        user.display_name
-      end
+  has_one_attached :imageobject
+  belongs_to :user
+
+  mount_uploader :image, ImageUploader
+
+  def author_name
+    user.display_name
+  end
+
+  def display_created_at
+    I18n.l(created_at, format: :default)
+  end
       
 end

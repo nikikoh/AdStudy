@@ -12,8 +12,8 @@
         password: 'foobar',
         password_confirmation: 'foobar',
         user_id: User.first.id,
-        title: Faker::JapaneseMedia::StudioGhibli.character,
-        content: Faker::Lorem.sentence
+        title: Faker::Lorem.sentence(word_count: 5),
+        content: Faker::Lorem.sentence(word_count: 50)
     )
     puts "\"#{user.username}\" has created!"
 end
